@@ -19,11 +19,11 @@ public class Point implements Cloneable {
         this.y = e.getY();
     }
 
-    public void input() {
+    public Point input() {
         Scanner input = new Scanner(System.in);
         x = input.nextDouble();
         y = input.nextDouble();
-
+        return this;
     }
 
     public static double getDistance(Point a, Point b) {
