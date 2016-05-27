@@ -8,7 +8,7 @@ public class Ex4_18 {
         System.out.print("Enter two characters: ");
         Scanner input = new Scanner(System.in);
         String str = input.nextLine();
-        HashMap<Character, String> hashmap = new HashMap<Character, String>();
+        HashMap<Character, String> hashmap = new HashMap<>();
         hashmap.put('M', "Mathematics");
         hashmap.put('C', "Computer Science");
         hashmap.put('I', "Information Technology");
