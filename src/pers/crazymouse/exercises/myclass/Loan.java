@@ -9,6 +9,8 @@ public class Loan {
     private double[] interest, principal, balance;
 
     public Loan(double p, double r, int n) {
+        if (p <= 0 || r <= 0 || n <= 0)
+            throw new IllegalArgumentException();
         this.p = p;
         this.r = r;
         this.n = n;
