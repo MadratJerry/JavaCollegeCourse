@@ -5,6 +5,7 @@ package pers.crazymouse.exercises;
  */
 public class Ex12_6 {
     public static void main(String[] args) {
+        /* question: why don't need throws exception? */
         System.out.println(hexToDecimal("ABCG"));
     }
 
