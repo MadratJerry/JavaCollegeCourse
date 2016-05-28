@@ -41,7 +41,7 @@ public class Segment extends Line implements GeometricContain<Point> {
         }
     }
 
-    public static double sum(Segment... list) {
+    public static double sum(Segment[] list) {
         double sum = 0;
         for (Segment i : list) {
             sum += i.getLength();
