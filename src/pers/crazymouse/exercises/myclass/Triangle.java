@@ -11,15 +11,22 @@ public class Triangle extends GeometricObject implements GeometricContain<Triang
 
     }
 
-    public Triangle(Point a, Point b, Point c) {
+    public Triangle(Point a, Point b, Point c) throws IllegalTriangleException {
         this(new Point[]{a, b, c});
     }
 
-    public Triangle(Point[] p) {
+    public Triangle(Point[] p) throws IllegalTriangleException {
         for (int i = 0; i < p.length; i++) {
             this.p[i] = new Point(p[i]);
         }
-        makeEdge();
+        edge = getEdge(p);
+        for (int i = 0; i < edge.length; i++) {
+            for (int j = i + 1; j < edge.length; j++) {
+                if (edge[i].getLength() + edge[j].getLength() <= edge[3 - i - j].getLength())
+                    throw new IllegalTriangleException();
+            }
+        }
+        perimeter = Segment.sum(edge);
     }
 
     public void inputTriangle() {
@@ -29,15 +36,15 @@ public class Triangle extends GeometricObject implements GeometricContain<Triang
         }
     }
 
-    private void makeEdge() {
-        perimeter = 0;
+    public static Segment[] getEdge(Point[] p) {
+        Segment edge[] = new Segment[3];
         int num = 0;
         for (int i = 0; i < 3; i++) {
             for (int j = i + 1; j < 3; j++) {
                 edge[num++] = new Segment(p[i], p[j]);
-                perimeter += edge[num - 1].getLength();
             }
         }
+        return edge;
     }
 
     public double getArea() {

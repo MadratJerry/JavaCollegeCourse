@@ -1,5 +1,6 @@
 package pers.crazymouse.exercises;
 
+import pers.crazymouse.exercises.myclass.IllegalTriangleException;
 import pers.crazymouse.exercises.myclass.Point;
 import pers.crazymouse.exercises.myclass.Triangle;
 
@@ -9,7 +10,7 @@ import java.util.Scanner;
  * Created by crazymouse on 5/27/16.
  */
 public class Ex11_15 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalTriangleException {
         System.out.print("Enter the number of the points: ");
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();
