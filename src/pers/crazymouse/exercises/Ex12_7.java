@@ -8,7 +8,7 @@ public class Ex12_7 {
         System.out.println(binaryToDecimal("110112"));
     }
 
-    public static int binaryToDecimal(String binaryString) throws NumberFormatException {
+    public static int binaryToDecimal(String binaryString) /* do not need throw */ {
         int decimalValue = 0;
         for (int i = 0; i < binaryString.length(); i++) {
             int binaryNum = binaryString.charAt(i) - '0';

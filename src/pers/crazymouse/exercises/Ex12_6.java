@@ -5,7 +5,8 @@ package pers.crazymouse.exercises;
  */
 public class Ex12_6 {
     public static void main(String[] args) {
-        /* question: why don't need throws exception? */
+        /* question: why don't need throws exception?
+        *  answer: it's not a runtime error exception. */
         System.out.println(hexToDecimal("ABCG"));
     }
 
