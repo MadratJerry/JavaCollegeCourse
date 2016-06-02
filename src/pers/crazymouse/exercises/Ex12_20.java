@@ -7,13 +7,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Created by crazymouse on 6/1/16.
+ * Created by crazymouse on 6/2/16.
  */
-public class Ex12_18 {
+public class Ex12_20 {
     public static void main(String[] args) throws IOException {
         if (args.length != 1) {
             System.out.println(
-                    "Usage: java Ex12_18 srcRootDirectory" +
+                    "Usage: java Ex12_20 srcRootDirectory" +
                             "(in dictionary out/production/UniversityCourse/))"
             );
             System.exit(1);
@@ -27,7 +27,7 @@ public class Ex12_18 {
                     for (File file : targetDir.listFiles()) {
                         if (file.isFile() && file.canWrite() &&
                                 file.getName().matches("[~!@#$%^&*()_+A-Za-z]{1,}.java")) {
-                            addLine(file, "package " + directory.getName() + "." + tmp.getName() + ";");
+                            delLine(file, "package " + directory.getName() + "." + tmp.getName() + ";");
                         }
                     }
                 }
@@ -37,9 +37,8 @@ public class Ex12_18 {
         }
     }
 
-    public static void addLine(File sourceFile, String addStr) throws IOException {
+    public static void delLine(File sourceFile, String addStr) throws IOException {
         ArrayList<String> list = new ArrayList<>();
-        list.add(addStr);
 
         try (
                 Scanner input = new Scanner(sourceFile)
@@ -47,7 +46,7 @@ public class Ex12_18 {
             while (input.hasNext()) {
                 String str = input.nextLine();
                 if (str.equals(addStr)) {
-                    return;
+                    continue;
                 }
                 list.add(str);
             }
