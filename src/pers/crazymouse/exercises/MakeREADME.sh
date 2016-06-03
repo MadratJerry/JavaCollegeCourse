@@ -51,7 +51,14 @@ ls myinterface/*.java| cut -d . -f 1 | while read i
 do
     echo "<li>"
     echo "<ul class="task-list">"
-    echo "<li class=\"task-list-item\"><input type=\"checkbox\" disabled checked> <a href=\"http://crazy-mouse.cn/Codes/Java/UniversityCourse/src/pers/crazymouse/exercises/"$i".java\">"${i##*/}"</a></li>"
+    echo "<li class=\"task-list-item\"><input type=\"checkbox\" disabled checked> <a href=\"http://crazy-mouse.cn/Codes/Java/UniversityCourse/src/pers/crazymouse/exercises/"$i".java\">"${i##*/}"</a>"
+    echo "<span style=\"font-size:9px;color:gray;\">"
+    stat $i".java"|grep Modify|cut -d . -f 1 | while read j
+    do
+        echo "Last "$j
+    done
+    echo "</span>"
+    echo "</li>"
     echo "</ul>"
     echo "</li>"
 done
@@ -63,7 +70,14 @@ ls *.java| cut -d . -f 1 | sort -n -t "_" -k 1.3 -k 2 | while read i
 do
     echo "<li>"
     echo "<ul class="task-list">"
-    echo "<li class=\"task-list-item\"><input type=\"checkbox\" disabled checked> <a href=\"http://crazy-mouse.cn/Codes/Java/UniversityCourse/src/pers/crazymouse/exercises/"$i".java\">"${i##*/}"</a></li>"
+    echo "<li class=\"task-list-item\"><input type=\"checkbox\" disabled checked> <a href=\"http://crazy-mouse.cn/Codes/Java/UniversityCourse/src/pers/crazymouse/exercises/"$i".java\">"${i##*/}"</a>"
+    echo "<span style=\"font-size:9px;color:gray;\">"
+    stat $i".java"|grep Modify|cut -d . -f 1 | while read j
+    do
+        echo "Last "$j
+    done
+    echo "</span>"
+    echo "</li>"
     echo "</ul>"
     echo "</li>"
 done
