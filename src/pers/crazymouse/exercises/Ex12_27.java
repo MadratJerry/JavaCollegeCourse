@@ -53,7 +53,7 @@ public class Ex12_27 {
         }
     }
 
-    public static String formatString(String str) {
+    static String formatString(String str) {
         Pattern pattern = Pattern.compile("Exercise[1-9]{1,}[0-9]{0,}_[1-9]{1,}[0-9]{0,}");
         Matcher matcher = pattern.matcher(str);
         while (matcher.find()) {
@@ -62,7 +62,7 @@ public class Ex12_27 {
         return str;
     }
 
-    public static String formatWord(String word) {
+    static String formatWord(String word) {
         word = word.substring(8);
         String[] numStr = word.split("_");
         return String.format("Exercise%02d_%02d", Integer.parseInt(numStr[0]), Integer.parseInt(numStr[1]));
