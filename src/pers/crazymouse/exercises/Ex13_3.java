@@ -1,7 +1,6 @@
 package pers.crazymouse.exercises;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 
 /**
  * Created by crazymouse on 6/8/16.
@@ -21,11 +20,6 @@ public class Ex13_3 {
     }
 
     public static void sort(ArrayList<Number> list) {
-        list.sort(new Comparator<Number>() {
-            @Override
-            public int compare(Number o1, Number o2) {
-                return (int) o1 - (int) o2;
-            }
-        });
+        list.sort((o1, o2) -> (int) o1 - (int) o2);
     }
 }

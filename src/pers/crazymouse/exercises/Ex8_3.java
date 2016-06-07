@@ -24,11 +24,7 @@ public class Ex8_3 {
             }
             stu[i] = new Student(i + "", correctCount);
         }
-        java.util.Arrays.sort(stu, new java.util.Comparator<Student>() {
-            public int compare(Student o1, Student o2) {
-                return o1.getScore() < o2.getScore() ? 1 : -1;
-            }
-        });
+        java.util.Arrays.sort(stu, (o1, o2) -> o1.getScore() < o2.getScore() ? 1 : -1);
         for (int i = 0; i < 8; i++)
             System.out.println("Student " + stu[i].getName() + "'s correct count is " + (int) stu[i].getScore());
     }

@@ -15,11 +15,7 @@ public class Ex5_9 {
             System.out.print("Enter the name and the score of the student: ");
             stu[i].inputInformation();
         }
-        java.util.Arrays.sort(stu, new java.util.Comparator<Student>() {
-            public int compare(Student o1, Student o2) {
-                return o1.getScore() < o2.getScore() ? 1 : -1;
-            }
-        });
+        java.util.Arrays.sort(stu, (o1, o2) -> o1.getScore() < o2.getScore() ? 1 : -1);
         System.out.println(stu[0].toString());
         System.out.println(stu[1].toString());
     }

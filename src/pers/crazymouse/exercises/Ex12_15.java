@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -31,12 +30,7 @@ public class Ex12_15 {
                 list.add(input.nextInt());
             }
 
-            list.sort(new Comparator<Integer>() {
-                @Override
-                public int compare(Integer o1, Integer o2) {
-                    return o1 - o2;
-                }
-            });
+            list.sort((o1, o2) -> o1 - o2);
 
             for (int i : list) {
                 System.out.print(i + " ");
