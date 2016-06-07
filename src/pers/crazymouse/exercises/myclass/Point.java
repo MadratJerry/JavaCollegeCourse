@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Point implements Cloneable {
     private double x, y;
 
+    public static final Point ORIGINPOINT = new Point(0, 0);
+
     public Point() {
         this(0, 0);
     }

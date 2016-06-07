@@ -6,7 +6,7 @@ public class Ex2_19 {
     public static void main(String[] args) {
         Triangle x = new Triangle();
         System.out.print("Enter three points for a triangle: ");
-        x.inputTriangle();
+        x.input();
         System.out.printf("The area of the triangle is %.1f", x.getArea());
     }
 }

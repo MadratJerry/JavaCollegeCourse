@@ -11,6 +11,16 @@ public class Triangle extends GeometricObject implements GeometricContain<Triang
 
     }
 
+    public Triangle(double s1, double s2, double s3) throws IllegalTriangleException {
+        edge[0] = new Segment(s1);
+        edge[1] = new Segment(s2);
+        edge[2] = new Segment(s3);
+        if (!isLegal(edge)) {
+            throw new IllegalTriangleException();
+        }
+        perimeter = Segment.sum(edge);
+    }
+
     public Triangle(Point a, Point b, Point c) throws IllegalTriangleException {
         this(new Point[]{a, b, c});
     }
@@ -20,16 +30,23 @@ public class Triangle extends GeometricObject implements GeometricContain<Triang
             this.p[i] = new Point(p[i]);
         }
         edge = getEdge(p);
-        for (int i = 0; i < edge.length; i++) {
-            for (int j = i + 1; j < edge.length; j++) {
-                if (edge[i].getLength() + edge[j].getLength() <= edge[3 - i - j].getLength())
-                    throw new IllegalTriangleException();
-            }
+        if (!isLegal(edge)) {
+            throw new IllegalTriangleException();
         }
         perimeter = Segment.sum(edge);
     }
 
-    public void inputTriangle() {
+    public boolean isLegal(Segment edge[]) {
+        for (int i = 0; i < edge.length; i++) {
+            for (int j = i + 1; j < edge.length; j++) {
+                if (edge[i].getLength() + edge[j].getLength() <= edge[3 - i - j].getLength())
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    public void input() {
         for (int i = 0; i < 3; i++) {
             p[i] = new Point();
             p[i].input();
