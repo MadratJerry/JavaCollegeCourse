@@ -13,6 +13,10 @@ public class Circle extends GeometricObject implements GeometricUbiety<Circle>, 
         this(0, 0, 1);
     }
 
+    public Circle(double radius) {
+        this(0, 0, radius);
+    }
+
     public Circle(double x, double y, double radius) {
         this(new Point(x, y), radius);
     }
@@ -59,10 +63,12 @@ public class Circle extends GeometricObject implements GeometricUbiety<Circle>, 
         return radius;
     }
 
+    @Override
     public double getArea() {
         return Math.PI * getRadius() * getRadius();
     }
 
+    @Override
     public double getPerimeter() {
         return 2 * Math.PI * getRadius();
     }

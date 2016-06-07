@@ -53,10 +53,12 @@ public class Rectangle extends GeometricObject implements GeometricUbiety<Rectan
         return height;
     }
 
+    @Override
     public double getArea() {
         return height * width;
     }
 
+    @Override
     public double getPerimeter() {
         return (height + width) * 2;
     }

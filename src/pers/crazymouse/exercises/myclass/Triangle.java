@@ -64,6 +64,7 @@ public class Triangle extends GeometricObject implements GeometricContain<Triang
         return edge;
     }
 
+    @Override
     public double getArea() {
         double s = perimeter;
         s /= 2;
@@ -73,6 +74,7 @@ public class Triangle extends GeometricObject implements GeometricContain<Triang
         return Math.pow(area, 0.5);
     }
 
+    @Override
     public double getPerimeter() {
         return perimeter;
     }
