@@ -68,4 +68,9 @@ public class Rectangle extends GeometricObject implements GeometricUbiety<Rectan
         return String.format("Width: %.2f, height: %.2f, area: %.2f, perimeter: %.2f", width, height, getArea(),
                 getPerimeter());
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return this.compareTo((Rectangle) obj) == 0;
+    }
 }

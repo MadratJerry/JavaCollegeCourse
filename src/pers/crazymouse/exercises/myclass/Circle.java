@@ -72,4 +72,9 @@ public class Circle extends GeometricObject implements GeometricUbiety<Circle>, 
     public double getPerimeter() {
         return 2 * Math.PI * getRadius();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return radius == ((Circle) obj).radius;
+    }
 }
