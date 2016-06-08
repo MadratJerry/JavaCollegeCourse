@@ -46,6 +46,14 @@ public abstract class GeometricObject implements Comparable<GeometricObject> {
         }
     }
 
+    public static double sumArea(GeometricObject[] a) {
+        double sum = 0;
+        for (GeometricObject obj : a) {
+            sum += obj.getArea();
+        }
+        return sum;
+    }
+
     public void setColor(String color) {
         this.color = color;
     }
