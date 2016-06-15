@@ -6,6 +6,7 @@
 .mtj.tmp/
 .idea/
 out/
+image/
 
 # Package Files #
 *.jar
