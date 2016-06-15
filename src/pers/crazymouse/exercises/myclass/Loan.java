@@ -1,6 +1,8 @@
 package pers.crazymouse.exercises.myclass;
 
-public class Loan {
+import java.io.Serializable;
+
+public class Loan implements Serializable {
     private double p;
     private double r;
     private int n;

@@ -7,6 +7,6 @@ import pers.crazymouse.exercises.myclass.Loan;
  */
 public class Ex12_4 {
     public static void main(String[] args) {
-        Loan loan = new Loan(0, 0, 0);
+        Loan loan = new Loan(1, 1, 1);
     }
 }
