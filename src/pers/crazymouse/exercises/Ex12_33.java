@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * Created by crazymouse on 6/4/16.
  */
-public class Ex12_31 {
+public class Ex12_33 {
     public static void main(String[] args) {
         String url = "http://cs.armstrong.edu/liang";
         crawler(url);
