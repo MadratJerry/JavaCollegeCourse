@@ -20,7 +20,7 @@ public class Ex14_20 extends Application {
 
         Draw.drawArrowLine(100, 250, 200, 10, pane);
         primaryStage.setScene(new Scene(pane, 400, 400));
-        primaryStage.setTitle("Ex14_18");
+        primaryStage.setTitle("Ex14_20");
         primaryStage.show();
     }
 }
