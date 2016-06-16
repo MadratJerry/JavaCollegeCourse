@@ -24,7 +24,7 @@ public class Ex14_3 extends Application {
     public void start(Stage primaryStage) throws IOException {
         Pane pane = new HBox();
         Random feed = new Random();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             String str = feed.nextInt(51) + 1 + "";
             pane.getChildren().add(new ImageView(new Image(
                     new FileInputStream("image/card/" + str + ".png"))));
