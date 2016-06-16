@@ -9,8 +9,13 @@ public class Rectangle extends GeometricObject implements GeometricUbiety<Rectan
     private double width, height;
 
     public Rectangle(double width, double height) {
+        this(width, height, new Point(width / 2, height / 2));
+    }
+
+    public Rectangle(double width, double height, Point o) {
         this.width = width;
         this.height = height;
+        this.o = new Point(o.getX(), o.getY());
     }
 
     public Rectangle() {
@@ -51,6 +56,14 @@ public class Rectangle extends GeometricObject implements GeometricUbiety<Rectan
 
     public double getHeight() {
         return height;
+    }
+
+    public double getX() {
+        return o.getX();
+    }
+
+    public double getY() {
+        return o.getY();
     }
 
     @Override
