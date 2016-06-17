@@ -18,8 +18,13 @@ public class ClockPane extends VBox {
     private int hour;
     private int minute;
     private int second;
+
     private boolean detail = false;
     private boolean digital = false;
+
+    private boolean hourHandVisible = true;
+    private boolean minuteHandVisible = true;
+    private boolean secondHandVisible = true;
 
     // Clock pane's width and height
     private double w = 300, h = 300;
@@ -76,13 +81,40 @@ public class ClockPane extends VBox {
         this.h = h;
     }
 
-    public void setDetail(boolean e) {
-        this.detail = e;
+    public void setDetail(boolean detail) {
+        this.detail = detail;
         paintClock();
     }
 
-    public void setDigital(boolean e) {
-        this.digital = e;
+    public void setDigital(boolean digital) {
+        this.digital = digital;
+        paintClock();
+    }
+
+    public boolean isHourHandVisible() {
+        return hourHandVisible;
+    }
+
+    public void setHourHandVisible(boolean hourHandVisible) {
+        this.hourHandVisible = hourHandVisible;
+        paintClock();
+    }
+
+    public boolean isMinuteHandVisible() {
+        return minuteHandVisible;
+    }
+
+    public void setMinuteHandVisible(boolean minuteHandVisible) {
+        this.minuteHandVisible = minuteHandVisible;
+        paintClock();
+    }
+
+    public boolean isSecondHandVisible() {
+        return secondHandVisible;
+    }
+
+    public void setSecondHandVisible(boolean secondHandVisible) {
+        this.secondHandVisible = secondHandVisible;
         paintClock();
     }
 
@@ -134,7 +166,10 @@ public class ClockPane extends VBox {
         getChildren().clear();
         setAlignment(Pos.CENTER);
         pane.getChildren().clear();
-        pane.getChildren().addAll(circle, t1, t2, t3, t4, sLine, mLine, hLine);
+        pane.getChildren().addAll(circle, t1, t2, t3, t4);
+        if (hourHandVisible) pane.getChildren().add(hLine);
+        if (minuteHandVisible) pane.getChildren().add(mLine);
+        if (secondHandVisible) pane.getChildren().add(sLine);
 
         if (detail) {
             double detailLength = 4;
