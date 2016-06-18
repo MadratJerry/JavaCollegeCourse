@@ -5,14 +5,16 @@ echo "## myclass"
 ls myclass/*.java| cut -d . -f 1 | while read i
 do
         echo "1. * [x] ""["${i##*/}"](http://crazy-mouse.cn/Codes/Java/UniversityCourse/src/pers/crazymouse/exercises/"$i".java)"
-        stat $i".java"|grep Modify|cut -d . -f 1 | while read j
-        do
-            echo "Last "$j
-        done
 done
 echo ""
 echo "## myinterface"
 ls myinterface/*.java| cut -d . -f 1 | while read i
+do
+        echo "1. * [x] ""["${i##*/}"](http://crazy-mouse.cn/Codes/Java/UniversityCourse/src/pers/crazymouse/exercises/"$i".java)"
+done
+echo ""
+echo "## myjavafx"
+ls myjavafx/*.java| cut -d . -f 1 | while read i
 do
         echo "1. * [x] ""["${i##*/}"](http://crazy-mouse.cn/Codes/Java/UniversityCourse/src/pers/crazymouse/exercises/"$i".java)"
 done
@@ -48,6 +50,25 @@ echo "</ol>"
 echo "<h2 id="myinterface"><a name="user-content-myinterface" href="#myinterface" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>myinterface</h2>"
 echo "<ol>"
 ls myinterface/*.java| cut -d . -f 1 | while read i
+do
+    echo "<li>"
+    echo "<ul class="task-list">"
+    echo "<li class=\"task-list-item\"><input type=\"checkbox\" disabled checked> <a href=\"http://crazy-mouse.cn/Codes/Java/UniversityCourse/src/pers/crazymouse/exercises/"$i".java\">"${i##*/}"</a>"
+    echo "<span style=\"font-size:9px;color:gray;\">"
+    stat $i".java"|grep Modify|cut -d . -f 1 | while read j
+    do
+        echo "Last "$j
+    done
+    echo "</span>"
+    echo "</li>"
+    echo "</ul>"
+    echo "</li>"
+done
+
+echo "</ol>"
+echo "<h2 id="myjavafx"><a name="user-content-myjavafx" href="#myjavafx" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>myjavafx</h2>"
+echo "<ol>"
+ls myjavafx/*.java| cut -d . -f 1 | while read i
 do
     echo "<li>"
     echo "<ul class="task-list">"
