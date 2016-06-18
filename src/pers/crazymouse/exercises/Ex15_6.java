@@ -34,6 +34,7 @@ public class Ex15_6 extends Application {
         pane.getChildren().add(text);
 
         primaryStage.setScene(new Scene(pane, 100, 100));
+        primaryStage.setTitle("EX15_6");
         primaryStage.show();
     }
 }
