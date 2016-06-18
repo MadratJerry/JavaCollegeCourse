@@ -124,6 +124,8 @@ public class ClockPane extends VBox {
         this.hour = calendar.get(Calendar.HOUR_OF_DAY);
         this.minute = calendar.get(Calendar.MINUTE);
         this.second = calendar.get(Calendar.SECOND);
+
+        paintClock();
     }
 
     protected void paintClock() {
