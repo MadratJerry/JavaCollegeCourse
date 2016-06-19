@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-(echo "# [Java Exercises(Github)](https://github.com/crazymousethief/java-college-course)"
+(echo "# [Java Exercises(Github)](https://github.com/crazymousethief/JavaCollegeCourse)"
 echo ""
 echo "## myclass"
 ls myclass/*.java| cut -d . -f 1 | while read i
