@@ -26,11 +26,8 @@ public class Ex15_6 extends Application {
         stringArrayList.add("Java is fun");
         stringArrayList.add("Java is powerful");
         Text text = new Text(stringArrayList.get(0));
-        text.setOnMouseClicked(event -> {
-            text.setText(stringArrayList.get(
-                    (stringArrayList.indexOf(text.getText()) + 1) % stringArrayList.size()
-            ));
-        });
+        text.setOnMouseClicked(event -> text.setText(stringArrayList.get(
+                (stringArrayList.indexOf(text.getText()) + 1) % stringArrayList.size())));
         pane.getChildren().add(text);
 
         primaryStage.setScene(new Scene(pane, 100, 100));

@@ -12,13 +12,10 @@ public class Ex17_2 {
     public static void main(String[] args) throws IOException {
         File file = new File("file/Exercise17_02.dat");
         if (!file.exists()) {
-            try (
-                    FileOutputStream output = new FileOutputStream(file)
-            ) {
+            try (FileOutputStream output = new FileOutputStream(file)) {
                 Random feed = new Random();
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < 100; i++)
                     output.write(feed.nextInt());
-                }
             }
         }
     }

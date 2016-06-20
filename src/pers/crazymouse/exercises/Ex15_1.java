@@ -32,9 +32,7 @@ public class Ex15_1 extends Application {
         GridPane paneButton = new GridPane();
         paneButton.setAlignment(Pos.CENTER);
         Button btRefresh = new Button("Refresh");
-        btRefresh.setOnMouseClicked(e -> {
-            refreshImage(paneImage);
-        });
+        btRefresh.setOnMouseClicked(e -> refreshImage(paneImage));
         paneButton.getChildren().add(btRefresh);
 
         Pane pane = new VBox();

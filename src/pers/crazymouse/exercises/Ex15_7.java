@@ -23,12 +23,8 @@ public class Ex15_7 extends Application {
         circle.setFill(Color.WHITE);
         circle.setStroke(Color.BLACK);
 
-        circle.setOnMousePressed(event -> {
-            circle.setFill(Color.BLACK);
-        });
-        circle.setOnMouseReleased(event -> {
-            circle.setFill(Color.WHITE);
-        });
+        circle.setOnMousePressed(event -> circle.setFill(Color.BLACK));
+        circle.setOnMouseReleased(event -> circle.setFill(Color.WHITE));
 
         pane.getChildren().add(circle);
         primaryStage.setScene(new Scene(pane));

@@ -12,19 +12,13 @@ public class Ex17_8 {
     public static void main(String[] args) throws IOException {
         File file = new File("file/Exercise17_08.dat");
         int count;
-        if (file.exists()) {
-            try (
-                    FileInputStream input = new FileInputStream(file)
-            ) {
+        if (file.exists())
+            try (FileInputStream input = new FileInputStream(file)) {
                 count = input.read();
                 count++;
             }
-        } else {
-            count = 1;
-        }
-        try (
-                FileOutputStream output = new FileOutputStream(file)
-        ) {
+        else count = 1;
+        try (FileOutputStream output = new FileOutputStream(file)) {
             output.write(count);
         }
     }

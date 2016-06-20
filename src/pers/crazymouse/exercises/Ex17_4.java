@@ -18,10 +18,8 @@ public class Ex17_4 {
         File sourceFile = new File("file/" + args[0]);
         File targetFile = new File("file/" + args[1]);
         if (sourceFile.exists()) {
-            try (
-                    DataInputStream input = new DataInputStream(new FileInputStream(sourceFile));
-                    DataOutputStream output = new DataOutputStream(new FileOutputStream(targetFile))
-            ) {
+            try (DataInputStream input = new DataInputStream(new FileInputStream(sourceFile));
+                 DataOutputStream output = new DataOutputStream(new FileOutputStream(targetFile))) {
                 output.writeUTF(input.readLine());
             }
             System.out.println(sourceFile.length());

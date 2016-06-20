@@ -26,9 +26,7 @@ public class Ex15_8 extends Application {
             text.setY(event.getY());
             text.setText(String.format("(%.2f, %.2f)", event.getX(), event.getY()));
         });
-        pane.setOnMouseReleased(event -> {
-            text.setText("");
-        });
+        pane.setOnMouseReleased(event -> text.setText(""));
 
         primaryStage.setScene(new Scene(pane, 300, 300));
         primaryStage.setTitle("Ex15_8");

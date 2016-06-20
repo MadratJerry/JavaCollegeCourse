@@ -28,7 +28,6 @@ public class Ex15_16 extends Application {
     public void start(Stage primaryStage) {
         Pane pane = new Pane();
 
-
         circle1.setFill(Color.WHITE);
         circle1.setStroke(Color.BLACK);
         circle2.setFill(Color.WHITE);

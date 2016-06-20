@@ -10,9 +10,7 @@ import java.io.*;
 public class Ex17_7 {
     public static void main(String[] args) throws IOException {
         File file = new File("file/Exercise17_07.dat");
-        try (
-                ObjectInputStream input = new ObjectInputStream(new FileInputStream(file))
-        ) {
+        try (ObjectInputStream input = new ObjectInputStream(new FileInputStream(file))) {
             while (true) {
                 Loan loan = (Loan) (input.readObject());
                 System.out.println(loan.getTotalPayment());

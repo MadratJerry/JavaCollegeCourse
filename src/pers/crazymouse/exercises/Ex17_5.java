@@ -12,9 +12,7 @@ import java.util.Date;
 public class Ex17_5 {
     public static void main(String[] args) throws IOException {
         File file = new File("file/Exercise17_05.dat");
-        try (
-                ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(file))
-        ) {
+        try (ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(file))) {
             int[] array = new int[]{1, 2, 3, 4, 5};
             Date currentDate = new Date();
             double num = 5.5;
