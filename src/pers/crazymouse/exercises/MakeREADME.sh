@@ -27,7 +27,7 @@ done
 ) > README.md
 
 (
-echo "<body><article class="markdown-body"><h1 id="java-exercises"><a href="https://github.com/crazymousethief/java-college-course">Java Exercises(Github)</a></h1>"
+echo "<body><article class="markdown-body"><h1 id="java-exercises"><a href="https://github.com/crazymousethief/JavaCollegeCourse">Java Exercises(Github)</a></h1>"
 echo "<h2 id="myclass"><a name="user-content-myclass" href="#myclass" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>myclass</h2>"
 echo "<ol>"
 ls myclass/*.java| cut -d . -f 1 | while read i
