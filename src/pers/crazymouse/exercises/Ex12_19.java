@@ -22,7 +22,7 @@ public class Ex12_19 {
             System.out.println(wordNum);
         } catch (java.net.MalformedURLException ex) {
             System.out.println("Invalid URL.");
-        } catch (java.io.IOException ex) {
+        } catch (IOException ex) {
             System.out.println("I/O Errors: no such file");
         }
     }
