@@ -2,7 +2,7 @@
 ### Java template
 *.class
 
-.idea/
+.idea/workspace.xml
 out/
 image/
 file/
