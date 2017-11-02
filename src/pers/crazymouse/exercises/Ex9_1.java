@@ -1,6 +1,6 @@
 package pers.crazymouse.exercises;
 
-import com.sun.javafx.geom.Rectangle;
+import javafx.scene.shape.Rectangle;
 
 public class Ex9_1 {
     public static void main(String[] args) {
