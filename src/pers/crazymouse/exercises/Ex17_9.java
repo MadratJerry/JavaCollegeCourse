@@ -155,10 +155,20 @@ class Controller {
         for (int i = 0; i < tf.size(); i++) {
             address.string[i].setString(tf.get(i).getText());
         }
-        addresses.add(num + 1, address);
+        addresses.add(num, address);
     }
 
     void update() {
+        if (addresses.size() == 0) {
+            add();
+            return;
+        }
+
+        Address address = new Address();
+        for (int i = 0; i < tf.size(); i++) {
+            address.string[i].setString(tf.get(i).getText());
+        }
+        addresses.set(num, address);
         try {
             file.setLength(0);
             file.seek(0);
